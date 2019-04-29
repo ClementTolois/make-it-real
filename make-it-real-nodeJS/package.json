@@ -1,0 +1,14 @@
+{
+  "name": "make-it-real-nodejs",
+  "version": "0.1.0",
+  "description": "nodeJS server for make-it-real application",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "author": "Clément Tolois & Théo Koël",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  }
+}
