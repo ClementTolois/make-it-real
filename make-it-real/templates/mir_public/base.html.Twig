@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <!-- SEO -->
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Métas -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    {% block metas %}{% endblock %}
+    <!-- Links -->
+    <link rel="icon" href="#">
+    <link href="{{ asset('assets/css/global/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/mir_public/base.css') }}" rel="stylesheet">
+    {% block links %}{% endblock %}
+    <!-- Scripts -->
+    <script src="{{ asset('assets/js/global/jQuery.js') }}"></script>
+    <script src="{{ asset('assets/js/global/popper.js') }}"></script>
+    <script src="{{ asset('assets/js/global/bootstrap.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</head>
+<body>
+    <header>
+    </header>
+    {% block body %}{% endblock %}
+</body>
+</html>
