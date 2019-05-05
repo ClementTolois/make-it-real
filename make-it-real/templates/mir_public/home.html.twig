@@ -7,9 +7,18 @@ Make it real | Make your projects a reality
 {% block metas %}{# Extra metas #}
 {% endblock %}
 {% block links %}{# Extra links #}
+<link href="{{ asset('assets/css/mir_public/home.css') }}" rel="stylesheet">
 {% endblock %}
 {% block scripts %}{# Extra scripts #}
+<script src="{{ asset('assets/js/mir_public/paroller.js') }}"></script>
+<script src="{{ asset('assets/js/mir_public/home.js') }}"></script>
 {% endblock %}
 {# Write body #}
 {% block body %}
+<!-- Section header -->
+<section id="header" class="jumbotron" data-paroller-factor="0.5"
+data-paroller-factor-xs="0.5">
+</section>
+<!-- Second section -->
+<section id="second"></section>
 {% endblock %}

@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <!-- SEO -->
     <title>{% block title %}{% endblock %}</title>
@@ -9,6 +10,8 @@
     <!-- Links -->
     <link rel="icon" href="#">
     <link href="{{ asset('assets/css/global/bootstrap.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{{ asset('assets/css/mir_public/base.css') }}" rel="stylesheet">
     {% block links %}{% endblock %}
     <!-- Scripts -->
@@ -17,9 +20,38 @@
     <script src="{{ asset('assets/js/global/bootstrap.js') }}"></script>
     {% block scripts %}{% endblock %}
 </head>
+
 <body>
     <header>
+        <nav id="nav-lg">
+            <a href="{{ url('public_home') }}"><img src="{{ asset('assets/img/logo.png') }}" alt="mir_logo"></a>
+            <a href="{{ url('public_home') }}">
+                <div>HOME</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_discover') }}">
+                <div>DISCOVER</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_get_started') }}">
+                <div>GET STARTED</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_community') }}">
+                <div>COMMUNITY</div>
+                <div></div>
+            </a>
+            <a href="#" class="link-sign">
+                <div>Register</div>
+            </a>
+            <a href="#" class="link-sign">
+                <div>
+                    Log in
+                </div>
+            </a>
+        </nav>
     </header>
     {% block body %}{% endblock %}
 </body>
+
 </html>
