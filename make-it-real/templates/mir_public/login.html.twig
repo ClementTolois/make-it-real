@@ -1,16 +1,27 @@
-{% extends 'mir_public/base.html.twig' %}
-
-{% block title %}Log in!{% endblock %}
+{# Extends template base #}
+{% extends "mir_public/base.html.twig" %}
+{# add extra Seo, meta, links and scripts #}
+{% block title %}{# Title of the page #}
+Make it real | Log in
+{% endblock %}
+{% block metas %}{# Extra metas #}
+{% endblock %}
+{% block links %}{# Extra links #}
+<link href="{{ asset('assets/css/mir_public/login.css') }}" rel="stylesheet">
+{% endblock %}
+{% block scripts %}{# Extra scripts #}
+{% endblock %}
 
 {% block body %}
-<form method="post" style="margin-top:200px">
+<section style="margin-top:200px">
+<form method="post" class="container">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
     <label for="inputEmail" class="sr-only">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
 
@@ -29,8 +40,9 @@
         </div>
     #}
 
-    <button class="btn btn-lg btn-primary" type="submit">
+    <button class="btn" type="submit">
         Sign in
     </button>
 </form>
+</section>
 {% endblock %}

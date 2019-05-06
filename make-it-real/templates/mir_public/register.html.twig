@@ -1,0 +1,26 @@
+{# Extends template base #}
+{% extends "mir_public/base.html.twig" %}
+{# add extra Seo, meta, links and scripts #}
+{% block title %}{# Title of the page #}
+Make it real | Register
+{% endblock %}
+{% block metas %}{# Extra metas #}
+{% endblock %}
+{% block links %}{# Extra links #}
+<link href="{{ asset('assets/css/mir_public/register.css') }}" rel="stylesheet">
+{% endblock %}
+{% block scripts %}{# Extra scripts #}
+{% endblock %}
+
+{% block body %}
+<section style="margin-top:200px">
+<div class="container">
+    <h1>Register</h1>
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email ,{attr: {class: 'form-control'} }) }}
+        {{ form_row(registrationForm.plainPassword ,{attr: {class: 'form-control'} }) }}
+        <button class="btn">Register</button>
+    {{ form_end(registrationForm) }}
+</div>    
+</section>
+{% endblock %}
