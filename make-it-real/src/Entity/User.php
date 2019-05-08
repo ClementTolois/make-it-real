@@ -48,11 +48,6 @@ class User implements UserInterface
     private $last_name;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $role;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\Project", mappedBy="owner")
      */
     private $projects_;
@@ -166,18 +161,6 @@ class User implements UserInterface
     public function setLastName(string $last_name): self
     {
         $this->last_name = $last_name;
-
-        return $this;
-    }
-
-    public function getRole(): ?string
-    {
-        return $this->role;
-    }
-
-    public function setRole(string $role): self
-    {
-        $this->role = $role;
 
         return $this;
     }
