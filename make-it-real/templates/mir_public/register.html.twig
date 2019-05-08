@@ -1,0 +1,71 @@
+{# Extends template base #}
+{% extends "mir_public/base.html.twig" %}
+{# add extra Seo, meta, links and scripts #}
+{% block title %}{# Title of the page #}
+Make it real | Register
+{% endblock %}
+{% block metas %}{# Extra metas #}
+{% endblock %}
+{% block links %}{# Extra links #}
+<link href="{{ asset('assets/css/mir_public/register.css') }}" rel="stylesheet">
+{% endblock %}
+{% block scripts %}{# Extra scripts #}
+<script src="{{ asset('assets/js/mir_public/paroller.js') }}"></script>
+<script src="{{ asset('assets/js/mir_public/mir_public.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<section id="formSection" class="jumbotron" data-paroller-factor="0.5"
+data-paroller-factor-xs="0.5">
+    <div id="formContainer" class="container p-5 rounded bg-light">
+        <div class="row ml-1 mt-3 mb-3">
+            <h1>Join Us !</h1>
+        </div>
+        {{ form_start(registrationForm) }}
+        <div class="row  mt-0 mb-0">
+            <div class="col-sm-6 mt-1 mb-1">
+            {{ form_row(registrationForm.firstName, {attr:{class: 'form-control'}}) }}
+            </div>
+            <div class="col-sm-6 mt-1 mb-1">
+            {{ form_row(registrationForm.lastName, {attr:{class: 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="row mt-3 mb-3">
+            <div class="col-sm-12">
+                    {{ form_row(registrationForm.email, {attr:{class: 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="row mt-3 mb-3">
+            <div class="col-sm-12">
+                {{ form_row(registrationForm.password.first, {attr:{class: 'form-control'}}) }}               
+            </div>
+        </div>
+        <div class="row mt-3 mb-3">
+            <div class="col-sm-12">
+                {{ form_row(registrationForm.password.second, {attr:{class: 'form-control'}}) }}               
+            </div>
+        </div>
+        <div class="row mt-3 mb-3">
+            <div class="col-sm-12">
+                I accept <a href="#" class="text-danger">terms of use</a>.
+            </div>
+            <div class="col-sm-12">
+            {{ form_row(registrationForm.agreeTerms, {attr:{class: 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="row mt-3 mb-3">
+        <div class="col-sm-12">
+                {{ form_row(registrationForm.register) }}
+        </div>
+        </div>
+        {{ form_end(registrationForm) }}
+    </div>
+</section>
+{% endblock %}
+
+
+    {# {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.email ,{attr: {class: 'form-control'} }) }}
+        {{ form_row(registrationForm.password ,{attr: {class: 'form-control'} }) }}
+        <button class="btn">Register</button>
+    {{ form_end(registrationForm) }} #}

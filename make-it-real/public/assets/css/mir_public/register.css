@@ -1,0 +1,37 @@
+/**
+Css for register.html.twig
+**/
+
+/* General */
+
+/* Specific */
+
+#formSection {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../img/stock/film1.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+}
+
+ul {
+    background-color: #F26D6D;
+    border-radius: .2vw;
+    padding: .5vw 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+    list-style: none;
+    color: #fefefe;
+}

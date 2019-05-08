@@ -1,3 +1,115 @@
-html,body {
+/**
+* base.css for public templates
+* Use this file only for these templates
+* Write by Clément Tolois & Théo Koël  
+**/
 
+/* Main  */
+html,body {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    user-select: none;
+    font-family: 'Raleway', sans-serif;
 }
+
+::-webkit-scrollbar {
+	width: 3px;
+	background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #F26D6D;
+}
+
+/* Header & nav */
+header {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NAV LARGE */
+
+#nav-lg {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5vw 0;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 3vw rgba(0,0,0,.7);
+    background-color: #fefefe;
+    transition: 300ms;
+    z-index: 10000;
+}
+
+#nav-lg a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2vw;
+    text-decoration: none;
+}
+
+#nav-lg a img {
+    width: 6vw;
+}
+
+#nav-lg a div:nth-child(1) {
+    font-family: 'Raleway';
+    font-size: .9vw;
+    font-weight: 800;
+    text-decoration: none;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms;
+}
+
+#nav-lg a div:nth-child(2) {
+    width: 0;
+    height: .2vw;
+    background: #F26D6D;
+    border-radius: 1vw;
+    transition: 200ms;
+}
+
+#nav-lg a:hover div:nth-child(1) {
+    color: #555;
+}
+
+#nav-lg a:hover div:nth-child(2) {
+    width: 100%;
+}
+
+#nav-lg .link-sign {
+    width: 6vw;
+    border: solid .1vw #F26D6D;
+    padding: .4vw .8vw;
+    border-radius: 1vw;
+    transition: 200ms;
+    margin: 0 .5vw;
+}
+
+#nav-lg .link-sign:hover {
+    background: #F26D6D;
+}
+
+#nav-lg .link-sign div:nth-child(1) {
+    color: #F26D6D;
+    font-size: .7vw;
+    transition: 200ms;
+}
+
+#nav-lg .link-sign:hover div:nth-child(1) {
+    color: #fefefe;
+}
+

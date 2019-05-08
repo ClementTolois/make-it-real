@@ -16,6 +16,12 @@ security:
             security: false
         main:
             anonymous: true
+            guard:
+                authenticators:
+                    - App\Security\MIRLoginAuthenticator
+            logout:
+                path: app_logout
+                target: public_home
 
             # activate different ways to authenticate
 
