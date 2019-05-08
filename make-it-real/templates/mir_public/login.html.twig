@@ -10,26 +10,36 @@ Make it real | Log in
 <link href="{{ asset('assets/css/mir_public/login.css') }}" rel="stylesheet">
 {% endblock %}
 {% block scripts %}{# Extra scripts #}
+<script src="{{ asset('assets/js/mir_public/paroller.js') }}"></script>
+<script src="{{ asset('assets/js/mir_public/mir_public.js') }}"></script>
 {% endblock %}
 
 {% block body %}
-<section style="margin-top:200px">
-<form method="post" class="container">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+<section id="formSection" class="jumbotron" data-paroller-factor="0.5" data-paroller-factor-xs="0.5">
+    <div id="formContainer" class="container p-5 rounded bg-light">
+        <form method="post" class="container">
+            <div class="row ml-1 mt-3 mb-3">
+                <h1>Sign In !</h1>
+            </div>
+            {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            <div class="row mt-3 mb-3">
+                <div class="col-sm-12">
+                    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required
+                        autofocus>
+                </div>
+            </div>
+            <div class="row mt-3 mb-3">
+                <div class="col-sm-12">
+                    <input type="password" name="password" id="inputPassword" class="form-control"
+                        placeholder="Password" required>
+                </div>
+            </div>
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail" class="sr-only">Email</label>
-    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
-
-    {#
+            {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
         See https://symfony.com/doc/current/security/remember_me.html
 
@@ -40,9 +50,10 @@ Make it real | Log in
         </div>
     #}
 
-    <button class="btn" type="submit">
-        Sign in
-    </button>
-</form>
+            <button class="btn btn-outline-danger" type="submit">
+                Sign in
+            </button>
+        </form>
+    </div>
 </section>
 {% endblock %}
