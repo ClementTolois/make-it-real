@@ -15,7 +15,7 @@ class RegistrationController extends AbstractController
     /**
      * @Route("/register", name="app_register")
      */
-    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
+    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer): Response
     {
         $user = new User();
         $form = $this->createForm(RegistrationFormType::class, $user);
@@ -40,7 +40,19 @@ class RegistrationController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
-            // do anything else you need here, like send an email
+            //Send confirmation code
+            $message = (new \Swift_Message('Welcome to make-it-real '.$user->getFirstName().' !'))
+                ->setFrom('webmaster.makeitreal@gmail.com')
+                ->setTo($user->getEmail())
+                ->setBody(
+                    $this->renderView(
+                        'mir_mail/registration.html.twig',
+                        ['user' => $user]
+                    ),
+                    'text/html'
+                );
+
+            $mailer->send($message);
 
             return $this->redirectToRoute('app_login');
         }
