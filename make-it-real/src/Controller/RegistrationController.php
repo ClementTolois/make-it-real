@@ -31,8 +31,10 @@ class RegistrationController extends AbstractController
             );
             $user->setFirstName($form->get('firstName')->getData());
             $user->setLastName($form->get('lastName')->getData());
-            $user_role = ['ROLE_USER'];
+            $user_role = ['ROLE_CANDIDATE'];
             $user->setRoles($user_role);
+            $user->generateCode();
+
             //Add to databse
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
@@ -46,5 +48,24 @@ class RegistrationController extends AbstractController
         return $this->render('mir_public/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/register/{code}/{id}", name="app_confirm")
+     */
+    public function confirm($code,$id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository(User::class)->findOneBy(array('code' => $code,'id' => $id));
+        if($user && $user->getCode()) {
+            $user_role = ['ROLE_USER'];
+            $user->setRoles($user_role);
+            $user->setCode(null);
+            $em->persist($user);
+            $em->flush();
+            return $this->redirectToRoute('user_panel');
+        } else {
+            return $this->redirectToRoute('public_home');
+        }
     }
 }
