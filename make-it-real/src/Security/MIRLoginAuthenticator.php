@@ -85,8 +85,24 @@ class MIRLoginAuthenticator extends AbstractFormLoginAuthenticator
             return new RedirectResponse($targetPath);
         }
 
-        // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
-        throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
+        //Supprimer le code de récupération si le role est user (permet de ne pas risquer un reset lors d'une attaque en brut force)
+        $user = $token->getUser();
+        if(!empty($user->getCode())) {
+            $roles = $user->getRoles();
+            $reset = true;
+            foreach ($roles as $role) {
+                if ($role == 'ROLE_CANDIDATE') {
+                    $reset = false;
+                }
+            }
+            if ($reset) {
+                $user->setCode(null);
+                $this->entityManager->persist($user);
+                $this->entityManager->flush();
+            }
+        }
+
+        return new RedirectResponse($this->urlGenerator->generate('user_panel'));
     }
 
     protected function getLoginUrl()
