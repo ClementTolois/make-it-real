@@ -36,7 +36,6 @@ Make it real | Log in
                         placeholder="Password" required>
                 </div>
             </div>
-
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
             {#
@@ -53,6 +52,12 @@ Make it real | Log in
             <button class="btn btn-outline-danger" type="submit">
                 Sign in
             </button>
+
+            <div class="row mt-3 mb-3">
+                <div class="col-sm-12">
+                    <a href="{{ url('app_reset_pwd') }}" class="text-danger">I forgot my password</a>.
+                </div>
+            </div>
         </form>
     </div>
 </section>
