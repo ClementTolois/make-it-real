@@ -15,50 +15,14 @@
                             </div>
                             <div aria-labelledby="headingOne" class="collapse show" data-parent="#accordion" id="collapseOne">
                                 <div class="card-body">
-                                    <div class="list-group-item list-group-item-action active" data-toggle="list">
-                                        <p class="col-12">Projet 1</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 2</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 3</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 4</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 5</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 6</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 7</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 8</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 9</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
+                                    <div class="list-group" id="list-tab" role="tablist">
+                                        {% for i in 0..8 %}
+                                            <div class="list-group-item list-group-item-action" data-toggle="list" role="tab">
+                                                <p class="col-12">Projet{{i}}</p>
+                                                <p class="col-12">Auteur</p>
+                                                <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
+                                            </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -73,50 +37,14 @@
                             </div>
                             <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordion" id="collapseTwo">
                                 <div class="card-body">
-                                    <div class="list-group-item list-group-item-action active" data-toggle="list">
-                                        <p class="col-12">Projet 1</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 2</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 3</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 4</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 5</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 6</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 7</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 8</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
-                                    </div>
-                                    <div class="list-group-item list-group-item-action" data-toggle="list">
-                                        <p class="col-12">Projet 9</p>
-                                        <p class="col-12">Auteur</p>
-                                        <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
+                                    <div class="list-group" id="list-tab" role="tablist">
+                                        {% for i in 0..4 %}
+                                            <div class="list-group-item list-group-item-action" data-toggle="list">
+                                                <p class="col-12">Projet{{i}}</p>
+                                                <p class="col-12">Auteur</p>
+                                                <p class="col-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ipsa ratione cupiditate quae laboriosam nihil eum, error commodi mollitia repellendus!</p>
+                                            </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -152,89 +80,88 @@
                                         <td class="text-center font-weight-bold">salut</td>
                                     </tr>
                                     <tr class="bg-danger">
-                                        <td class="text-center">Hey</tdclass>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="col-4 p-0">
-                                <table class="table table-dark">
-                                    <tr class="table-active">
-                                        <td class="text-center font-weight-bold">salut</td>
-                                    </tr>
-                                    <tr class="bg-danger">
                                         <td class="text-center">Hey</td>
                                     </tr>
-                                </table>
-                            </div>
-                            <div class="col-4 p-0 pr-3">
-                                <table class="table table-dark">
-                                    <tr class="table-active">
-                                        <td class="text-center font-weight-bold">salut</td>
-                                    </tr>
-                                    <tr class="bg-danger">
-                                        <td class="text-center">Hey</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </dic>
+                                </tdclass>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-4 p-0">
+                        <table class="table table-dark">
+                            <tr class="table-active">
+                                <td class="text-center font-weight-bold">salut</td>
+                            </tr>
+                            <tr class="bg-danger">
+                                <td class="text-center">Hey</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-4 p-0 pr-3">
+                        <table class="table table-dark">
+                            <tr class="table-active">
+                                <td class="text-center font-weight-bold">salut</td>
+                            </tr>
+                            <tr class="bg-danger">
+                                <td class="text-center">Hey</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-                <div class="row h-50 pb-5 d-flex justify-content-around">
-                    <dic class="col-5 border pr-0 pl-0">
-                        <blockquote class="blockquote pl-4" style="background-color: #F26D6D;color: #fff;">
-                            <p class="mb-0">Material</p>
-                            <footer class="blockquote-footer" style="color: #E0E0E0">On
-                                <cite title="Source Title">Projet 1</cite>
-                            </footer>
-                        </blockquote>
-                        <ul class="list-group pre-scrollable vh-100">
-                            <li class="list-group-item border-bottom">Cras justo odio</li>
-                            <li class="list-group-item border-bottom">Dapibus ac facilisis in</li>
-                            <li class="list-group-item border-bottom">Morbi leo risus</li>
-                            <li class="list-group-item border-bottom">Porta ac consectetur ac</li>
-                            <li class="list-group-item border-bottom">Vestibulum at eros</li>
-                            <li class="list-group-item border-bottom">Cras justo odio</li>
-                            <li class="list-group-item border-bottom">Dapibus ac facilisis in</li>
-                            <li class="list-group-item border-bottom">Morbi leo risus</li>
-                            <li class="list-group-item border-bottom">Porta ac consectetur ac</li>
-                            <li class="list-group-item border-bottom">Vestibulum at eros</li>
-                            <li class="list-group-item border-bottom">Cras justo odio</li>
-                            <li class="list-group-item border-bottom">Dapibus ac facilisis in</li>
-                            <li class="list-group-item border-bottom">Morbi leo risus</li>
-                            <li class="list-group-item border-bottom">Porta ac consectetur ac</li>
-                            <li class="list-group-item border-bottom">Vestibulum at eros</li>
-                            <li class="list-group-item border-bottom">Cras justo odio</li>
-                            <li class="list-group-item border-bottom">Dapibus ac facilisis in</li>
-                            <li class="list-group-item border-bottom">Morbi leo risus</li>
-                            <li class="list-group-item border-bottom">Porta ac consectetur ac</li>
-                            <li class="list-group-item border-bottom">Vestibulum at eros</li>
-                            <li class="list-group-item border-bottom">Cras justo odio</li>
-                            <li class="list-group-item border-bottom">Dapibus ac facilisis in</li>
-                            <li class="list-group-item border-bottom">Morbi leo risus</li>
-                            <li class="list-group-item border-bottom">Porta ac consectetur ac</li>
-                            <li class="list-group-item border-bottom">Vestibulum at eros</li>
-
-                        </ul>
-                    </dic>
-                    <dic class="col-5 border pr-0 pl-0">
-                        <blockquote class="blockquote pl-4" style="background-color: #F26D6D;color: #fff;">
-                            <p class="mb-0">Information pratique</p>
-                            <footer class="blockquote-footer" style="color: #E0E0E0">For
-                                <cite title="Source Title">Make It Real</cite>
-                            </footer>
-                        </blockquote>
-                        <div class="row h-50">
-                            <div class="col font-weight-bold d-flex justify-content-center align-items-center">Forum</div>
-                            <div class="col font-weight-bold d-flex justify-content-center align-items-center">FAQ</div>
-                        </div>
-                        <div class="row h-50">
-                            <div class="col font-weight-bold d-flex justify-content-center align-items-center">Tuto</div>
-                            <div class="col font-weight-bold d-flex justify-content-center align-items-center">Last Update</div>
-                        </div>
-                    </dic>
-                </div>
-            </div>
+            </dic>
         </div>
-    </section>
+        <div class="row h-50 pb-5 d-flex justify-content-around">
+            <dic class="col-5 border pr-0 pl-0">
+                <blockquote class="blockquote pl-4" style="background-color: #F26D6D;color: #fff;">
+                    <p class="mb-0">Material</p>
+                    <footer class="blockquote-footer" style="color: #E0E0E0">On
+                        <cite title="Source Title">Projet 1</cite>
+                    </footer>
+                </blockquote>
+                <ul class="list-group pre-scrollable vh-100">
+                    <li class="list-group-item border-bottom">Cras justo odio</li>
+                    <li class="list-group-item border-bottom">Dapibus ac facilisis in</li>
+                    <li class="list-group-item border-bottom">Morbi leo risus</li>
+                    <li class="list-group-item border-bottom">Porta ac consectetur ac</li>
+                    <li class="list-group-item border-bottom">Vestibulum at eros</li>
+                    <li class="list-group-item border-bottom">Cras justo odio</li>
+                    <li class="list-group-item border-bottom">Dapibus ac facilisis in</li>
+                    <li class="list-group-item border-bottom">Morbi leo risus</li>
+                    <li class="list-group-item border-bottom">Porta ac consectetur ac</li>
+                    <li class="list-group-item border-bottom">Vestibulum at eros</li>
+                    <li class="list-group-item border-bottom">Cras justo odio</li>
+                    <li class="list-group-item border-bottom">Dapibus ac facilisis in</li>
+                    <li class="list-group-item border-bottom">Morbi leo risus</li>
+                    <li class="list-group-item border-bottom">Porta ac consectetur ac</li>
+                    <li class="list-group-item border-bottom">Vestibulum at eros</li>
+                    <li class="list-group-item border-bottom">Cras justo odio</li>
+                    <li class="list-group-item border-bottom">Dapibus ac facilisis in</li>
+                    <li class="list-group-item border-bottom">Morbi leo risus</li>
+                    <li class="list-group-item border-bottom">Porta ac consectetur ac</li>
+                    <li class="list-group-item border-bottom">Vestibulum at eros</li>
+                    <li class="list-group-item border-bottom">Cras justo odio</li>
+                    <li class="list-group-item border-bottom">Dapibus ac facilisis in</li>
+                    <li class="list-group-item border-bottom">Morbi leo risus</li>
+                    <li class="list-group-item border-bottom">Porta ac consectetur ac</li>
+                    <li class="list-group-item border-bottom">Vestibulum at eros</li>
 
-{% endblock %}
+                </ul>
+            </dic>
+            <dic class="col-5 border pr-0 pl-0">
+                <blockquote class="blockquote pl-4" style="background-color: #F26D6D;color: #fff;">
+                    <p class="mb-0">Information pratique</p>
+                    <footer class="blockquote-footer" style="color: #E0E0E0">For
+                        <cite title="Source Title">Make It Real</cite>
+                    </footer>
+                </blockquote>
+                <div class="row h-50">
+                    <div class="col font-weight-bold d-flex justify-content-center align-items-center">Forum</div>
+                    <div class="col font-weight-bold d-flex justify-content-center align-items-center">FAQ</div>
+                </div>
+                <div class="row h-50">
+                    <div class="col font-weight-bold d-flex justify-content-center align-items-center">Tuto</div>
+                    <div class="col font-weight-bold d-flex justify-content-center align-items-center">Last Update</div>
+                </div>
+            </dic>
+        </div>
+    </div>
+</div></section>{% endblock %}
