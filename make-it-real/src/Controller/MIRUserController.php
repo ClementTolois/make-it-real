@@ -18,8 +18,7 @@ class MIRUserController extends AbstractController
         $projects = $user->getProjects();
 
         return $this->render('mir_user/panel.html.twig',[
-            'user' => $user,
-            'projects' => $projects
+            'user' => $user
         ]);
     }
 }
