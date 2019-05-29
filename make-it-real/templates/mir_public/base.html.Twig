@@ -1,0 +1,228 @@
+<html lang="en">
+
+<head>
+    <!-- SEO -->
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Métas -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    {% block metas %}{% endblock %}
+    <!-- Links -->
+    <link rel="icon" href="#">
+    <link href="{{ asset('assets/css/global/bootstrap.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{ asset('assets/css/mir_public/base.css') }}" rel="stylesheet">
+    {% block links %}{% endblock %}
+    <!-- Scripts -->
+    <script src="{{ asset('assets/js/global/jQuery.js') }}"></script>
+    <script src="{{ asset('assets/js/global/popper.js') }}"></script>
+    <script src="{{ asset('assets/js/global/bootstrap.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</head>
+
+<body>
+    <header>
+        <nav id="nav-lg">
+            <a href="{{ url('public_home') }}"><img src="{{ asset('assets/img/logo.png') }}" alt="mir_logo"></a>
+            <a href="{{ url('public_home') }}">
+                <div>HOME</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_discover') }}">
+                <div>DISCOVER</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_get_started') }}">
+                <div>GET STARTED</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_community') }}">
+                <div>COMMUNITY</div>
+                <div></div>
+            </a>
+            <a href="{{ url('app_login') }}" class="link-sign">
+                <div>Sign in</div>
+            </a>
+            <a href="{{ url('app_register') }}" class="link-sign">
+                <div>Register</div>
+            </a>
+        </nav>
+        <nav id="nav-sm">
+            <a href="{{ url('public_home') }}"><img src="{{ asset('assets/img/logo.png') }}" alt="mir_logo"></a>
+            <div id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="{{ url('public_home') }}">
+                <div>HOME</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_discover') }}">
+                <div>DISCOVER</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_get_started') }}">
+                <div>GET STARTED</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_community') }}">
+                <div>COMMUNITY</div>
+                <div></div>
+            </a>
+            <a href="{{ url('app_login') }}" class="link-sign">
+                <div>Sign in</div>
+            </a>
+            <a href="{{ url('app_register') }}" class="link-sign">
+                <div>Register</div>
+            </a>
+        </nav>
+    </header>
+    {% block body %}{% endblock %}
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
+
+        <div style="background-color: #F26D6D;">
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-light text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">Get connected with us on social networks!</h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f white-text mr-4"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text"> </i>
+                        </a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold">Make it real !</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                        consectetur
+                        adipisicing elit.</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Products</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Technical Cut</a>
+                    </p>
+                    <p>
+                        <a href="#!">Planning</a>
+                    </p>
+                    <p>
+                        <a href="#!">Budget</a>
+                    </p>
+                    <p>
+                        <a href="#!">Organization</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Your Account</a>
+                    </p>
+                    <p>
+                        <a href="#!">Documentation</a>
+                    </p>
+                    <p>
+                        <a href="#!">Forum</a>
+                    </p>
+                    <p>
+                        <a href="#!">Contact us</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> Paris, 72000, FR</p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#">make-it-real.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</body>
+
+</html>

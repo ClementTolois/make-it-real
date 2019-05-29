@@ -1,0 +1,29 @@
+/**
+Css for login.html.twig
+**/
+
+#formSection {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../img/stock/film1.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#formSection img {
+    width: 20vw;
+    margin-bottom: 5vw;
+}
+
+@media screen and (max-width: 960px) {
+    #formSection img {
+        width: 60vw;
+        margin-bottom: 10vw;
+    }   
+}
