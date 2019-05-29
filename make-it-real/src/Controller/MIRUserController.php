@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -12,6 +13,12 @@ class MIRUserController extends AbstractController
      */
     public function index()
     {
-        return $this->render('mir_user/panel.html.twig');
+        //Get datas
+        $user = $this->getUser();
+        $projects = $user->getProjects();
+
+        return $this->render('mir_user/panel.html.twig',[
+            'user' => $user
+        ]);
     }
 }

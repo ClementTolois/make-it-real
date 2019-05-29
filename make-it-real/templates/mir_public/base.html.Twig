@@ -48,6 +48,36 @@
                 <div>Register</div>
             </a>
         </nav>
+        <nav id="nav-sm">
+            <a href="{{ url('public_home') }}"><img src="{{ asset('assets/img/logo.png') }}" alt="mir_logo"></a>
+            <div id="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="{{ url('public_home') }}">
+                <div>HOME</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_discover') }}">
+                <div>DISCOVER</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_get_started') }}">
+                <div>GET STARTED</div>
+                <div></div>
+            </a>
+            <a href="{{ url('public_community') }}">
+                <div>COMMUNITY</div>
+                <div></div>
+            </a>
+            <a href="{{ url('app_login') }}" class="link-sign">
+                <div>Sign in</div>
+            </a>
+            <a href="{{ url('app_register') }}" class="link-sign">
+                <div>Register</div>
+            </a>
+        </nav>
     </header>
     {% block body %}{% endblock %}
     <!-- Footer -->
